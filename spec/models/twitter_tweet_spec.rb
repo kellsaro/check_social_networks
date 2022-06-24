@@ -1,0 +1,15 @@
+# == Schema Information
+#
+# Table name: twitter_tweets
+#
+#  id         :integer          not null, primary key
+#  tweet      :string
+#  username   :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+require 'rails_helper'
+
+RSpec.describe TwitterTweet, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
+end

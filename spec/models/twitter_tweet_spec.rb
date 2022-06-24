@@ -11,5 +11,8 @@
 require 'rails_helper'
 
 RSpec.describe TwitterTweet, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Validations" do
+    it { should validate_presence_of(:username) }
+    it { should validate_presence_of(:tweet) }
+  end
 end

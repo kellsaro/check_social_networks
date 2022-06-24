@@ -11,5 +11,8 @@
 require 'rails_helper'
 
 RSpec.describe InstagramPhoto, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Validations" do
+    it { should validate_presence_of(:username) }
+    it { should validate_presence_of(:picture) }
+  end
 end

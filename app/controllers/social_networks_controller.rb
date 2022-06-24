@@ -6,6 +6,9 @@ class SocialNetworksController < ApplicationController
   end
 
   def update
+    GetTwitterTweetsJob.perform_later
+    GetFacebookStatusesJob.perform_later
+    GetInstagramPhotosJob.perform_later
     head :no_content
   end
 end

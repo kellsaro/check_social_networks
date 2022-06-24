@@ -9,4 +9,5 @@
 #  updated_at :datetime         not null
 #
 class FacebookStatus < ApplicationRecord
+  validates :name, :status, presence: true
 end

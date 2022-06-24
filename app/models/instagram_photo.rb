@@ -9,4 +9,5 @@
 #  updated_at :datetime         not null
 #
 class InstagramPhoto < ApplicationRecord
+  validates :picture, :username, presence: true
 end

@@ -40,9 +40,13 @@ RSpec.describe "SocialNetworks", type: :request do
   end
 
   describe "PUT /update" do
-    xit "returns http success" do
+    it "returns http success" do
       put "/"
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(:no_content)
+    end
+
+    it "makes a call to background jobs" do
+
     end
   end
 

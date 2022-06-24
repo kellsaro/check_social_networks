@@ -6,5 +6,6 @@ class SocialNetworksController < ApplicationController
   end
 
   def update
+    head :no_content
   end
 end

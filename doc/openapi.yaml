@@ -1,0 +1,75 @@
+---
+openapi: 3.0.3
+info:
+  title: check_social_networks
+  version: 1.0.0
+servers: []
+paths:
+  "/":
+    get:
+      summary: index
+      tags:
+      - SocialNetwork
+      responses:
+        '200':
+          description: returns instagram photos
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  twitter:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        tweet:
+                          type: string
+                  facebook:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        status:
+                          type: string
+                  instagram:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        photo:
+                          type: string
+              example:
+                twitter:
+                - tweet: Hoping to work with Stadium Goods!
+                - tweet: Skateboard austin five dollar toast bitters kickstarter fashion
+                    axe literally drinking butcher.
+                - tweet: Cold-pressed 8-bit locavore cardigan pabst marfa art party
+                    readymade typewriter.
+                - tweet: Gastropub stumptown bicycle rights tumblr wes anderson gluten-free
+                    cornhole meditation.
+                facebook:
+                - status: Happy in interview process with Stadium Goods!
+                - status: Thundercats ramps single-origin coffee venmo direct trade
+                    loko humblebrag paleo.
+                - status: Roof you probably haven't heard of them listicle normcore
+                    direct trade bespoke.
+                - status: Mustache raw denim yuccie scenester ethical biodiesel narwhal
+                    salvia.
+                instagram:
+                - photo: enjoy_coding.jpg
+                - photo: https://robohash.org/eosaliquamnecessitatibus.png?size=300x300&set=set1
+                - photo: https://robohash.org/consequaturutpossimus.png?size=300x300&set=set1
+                - photo: https://robohash.org/quasiquiaillum.png?size=300x300&set=set1
+    put:
+      summary: update
+      tags:
+      - SocialNetwork
+      responses:
+        '204':
+          description: enqueues GetInstagramPhotosJob job
+          content:
+            '':
+              schema:
+                type: string
+              example: ''

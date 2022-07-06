@@ -1,6 +1,6 @@
 class GetTwitterTweetsJob < ApplicationJob
   queue_as :default
-  retry_on StandardError
+  retry_on RuntimeError
 
   def perform(*args)
     data = JSON.parse(ApiGateway.get(:twitter))

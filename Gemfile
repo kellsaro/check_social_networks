@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.1"
+ruby "3.2.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
@@ -57,6 +57,7 @@ group :test do
   gem "faker"
   gem "shoulda-matchers", "~> 4.5", ">= 4.5.1"
   gem "rspec-openapi"
+  gem "simplecov", require: false
 end
 
 gem "sidekiq", "~> 6.5"
